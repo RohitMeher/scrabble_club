@@ -1,0 +1,47 @@
+<div class="container" >
+  <div class="row justify-content-center align-items-center" style="padding-top:7%">
+    <%= form_with url: matches_path, method: :post, local: true, class: "col-6" do |form| %>
+      <div class="border bg-light" style="padding:7% 7% 7% 7%">
+        <div class="form-group">
+          <h3 class="font-weight-bold">Create Match</h3>
+        </div>
+
+        <div class="form-group">
+          <%= label :venue, 'Venue' %>
+          <%= text_field :match, :venue, class: "form-control", :required => true %>
+        </div>
+
+        <div class="form-group">
+          <%= label :start_date, 'Start date' %>
+          <%= date_field :match, :start_date, class: "form-control", :required => true, max: Date.today %>
+        </div>
+
+        <div class="form-group">
+          <%= label :player1_user_name, 'Player1 User Name' %>
+          <%= text_field_tag 'match[player1_user_name]','', class: "form-control", :required => true %>
+        </div>
+
+        <div class="form-group">
+          <%= label :player1_score, 'Player1 score' %>
+          <%= text_field_tag 'match[player1_score]', '', class: "form-control", :required => true %>
+        </div>          
+
+        <div class="form-group">
+          <%= label :player2_user_name, 'Player2 User Name' %>
+          <%= text_field_tag 'match[player2_user_name]', '', class: "form-control", :required => true %>
+        </div>
+
+        <div class="form-group">
+          <%= label :player2_score, 'Player2 score' %>
+          <%= text_field_tag 'match[player2_score]','', class: "form-control", :required => true %>
+        </div>
+
+        <div class="form-group">
+          <%= form.submit 'Create', class: "btn btn-primary float-right"%>
+        </div>
+          
+      </div>
+
+    <% end %>
+  </div>
+</div>

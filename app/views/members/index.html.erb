@@ -1,0 +1,29 @@
+<% if @members && @members.size > 0 %>
+  <div class="container" >
+    <div class= "float-left p-4">
+      <h3 class="font-weight-bold">Members</h3>
+    </div>
+    <div class= "float-right p-4">
+      <a class="btn btn-success" href = <%= new_member_path %>> Add Member</a>
+      <a class="btn btn-success" href = <%= new_match_path %>> Add Match</a>
+      <% unless Member.top_members.empty? %>
+        <a class="btn btn-success" href = <%= member_leader_board_path %>> Leader Board</a>
+      <% end %>
+    </div>
+
+    <%= render partial: 'member_results', locals: {members: @members} %>
+
+  </div>
+<% else %>
+  <div class="container">
+    <div class= "float-left p-4">
+      <h4 class="font-weight-bold">No Members in the Application</h4>
+    </div>
+    <div class= "float-right p-4">
+      <a class="btn btn-success" href = <%= new_member_path %>> Add Member</a>
+    </div>
+  </div>
+<% end %>
+<% content_for :styles do %>
+  .a { color: #002bff}
+<% end %>

@@ -1,0 +1,19 @@
+<% if flash[:notice]%>
+  <% messages = flash[:notice] %>
+  <% messages = [messages] unless messages.is_a?(Array) %>
+  <ul class = "alert alert-info">
+    <% messages.each do |msg|%>
+      <li> <%= msg %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<% if flash[:error]%>
+  <% messages = flash[:error] %>
+  <% messages = [messages] unless messages.is_a?(Array) %>
+  <ul class = "alert alert-danger">
+    <% messages.each do |msg|%>
+      <li> <%= msg %> </li>
+    <% end %>
+  </ul>
+<% end %>
