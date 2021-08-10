@@ -1,7 +1,7 @@
 class MembersController < ApplicationController
 
   def index
-    @members = Member.with_contact_number
+    @members = Member.with_contact_number(12)
   end
 
   def new

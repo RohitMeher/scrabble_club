@@ -3,7 +3,9 @@
   <div class= "float-left p-4">
     <h3 class="font-weight-bold">Members Leader board</h3>
   </div>
-
+  <div class= "float-right p-4">
+    <a class="btn btn-primary" href = <%= members_path %>> Back </a>
+  </div>
   <%= render partial: 'member_results', locals: {members: @top_members} %>
 
 </div>

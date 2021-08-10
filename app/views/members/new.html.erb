@@ -1,4 +1,7 @@
 <div class="container" >
+  <div class= "float-right p-4">
+    <a class="btn btn-primary" href = <%= members_path %>> Back </a>
+  </div>
   <div class="row justify-content-center align-items-center" style="padding-top:7%">
     <%= form_with scope: :member, url: members_path, method: :post, local: true, class: "col-6" do |form| %>
       <div class="border bg-light" style="padding:7% 7% 7% 7%">

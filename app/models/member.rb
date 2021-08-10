@@ -10,7 +10,7 @@ class Member < ActiveRecord::Base
 
   before_create :add_join_date
 
-  scope :with_contact_number, -> { joins(:addresses).select("members.*, addresses.phone_number")}
+  scope :with_contact_number, -> (l) { joins(:addresses).select("members.*, addresses.phone_number").order('members.created_at desc').limit(l)}
 
   def add_join_date
     self.join_date = Date.current
