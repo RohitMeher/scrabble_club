@@ -3,8 +3,8 @@
 1. User can create Members with required details like Player First Name and Last Name, User Name and Contact details.
 2. User can see all the register members of site in the members page
 3. In the Members page we have a feasibility to edit and delete the member
-  3.1 Upon clicking on the Edit button User will be nagivated to indvidual Member page where user can update the Member details
-  3.2 Upon clicking on the delete button for a Member system will give a alert like 'Are you sure?' if user clicks on Ok for the alert the member will be deleted
+  1. Upon clicking on the Edit button User will be nagivated to indvidual Member page where user can update the Member details
+  2. Upon clicking on the delete button for a Member system will give a alert like 'Are you sure?' if user clicks on Ok for the alert the member will be deleted
 4. User can create a match by giving the 2 player member names and the respective scores, when and where the match happened
 5. In the indvidual member page we are displaying the following details
    1. User name(which needs to be unique for all the users)
